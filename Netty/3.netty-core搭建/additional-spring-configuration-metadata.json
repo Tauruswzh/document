@@ -1,0 +1,54 @@
+{
+  "properties": [
+    {
+      "name": "health.message.netty.port",
+      "type": "java.lang.Integer",
+      "description": "Description for health.message.netty.port."
+    },
+    {
+      "name": "health.message.netty.bossThreads",
+      "type": "java.lang.Integer",
+      "description": "Description for health.message.netty.bossThreads."
+    },
+    {
+      "name": "health.message.netty.workerThreads",
+      "type": "java.lang.Integer",
+      "description": "Description for health.message.netty.workerThreads."
+    },
+    {
+      "name": "health.message.netty.keepAlive",
+      "type": "java.lang.Boolean",
+      "description": "Description for health.message.netty.keepAlive."
+    },
+    {
+      "name": "health.message.netty.backlog",
+      "type": "java.lang.Integer",
+      "description": "Description for health.message.netty.backlog."
+    },
+    {
+      "name": "health.message.netty.url",
+      "type": "java.lang.String",
+      "description": "Description for health.message.netty.url."
+    },
+    {
+      "name": "health.message.netty.readerIdle",
+      "type": "java.lang.Integer",
+      "description": "Description for health.message.netty.readerIdle."
+    },
+    {
+      "name": "health.message.netty.writerIdle",
+      "type": "java.lang.Integer",
+      "description": "Description for health.message.netty.writerIdle."
+    },
+    {
+      "name": "health.message.netty.allIdle",
+      "type": "java.lang.Integer",
+      "description": "Description for health.message.netty.allIdle."
+    },
+    {
+      "name": "health.message.netty.reuseAddr",
+      "type": "java.lang.Boolean",
+      "description": "Description for health.message.netty.reuseAddr."
+    }
+  ]
+}

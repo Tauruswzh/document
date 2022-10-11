@@ -1,0 +1,59 @@
+server:
+  port: 8800
+
+spring:
+  application:
+    name: @project.artifactId@
+  main:
+    allow-bean-definition-overriding: true
+
+  #  redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 10000
+    database: 0
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 2
+  #  数据库
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/netty_message?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false&allowMultiQueries=true
+    username: root
+    password: 123456
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      auto-commit: true
+      connection-test-query: SELECT 1
+      connection-timeout: 30000
+      max-lifetime: 1800000
+      maximum-pool-size: 15
+      minimum-idle: 5
+
+## mybatis
+mybatis:
+  mapper-locations: mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+# netty配置
+health:
+  message:
+    netty:
+      port: 7776
+      bossThreads: 2
+      workerThreads: 32
+      keepAlive: true
+      reuseAddr: true
+      backlog: 128
+      url: /websocket
+      readerIdle: 30
+      writerIdle: 30
+      allIdle: 60
